@@ -16,6 +16,19 @@ pandas has generated  50000  number of source data  with  200  attributes!
 store finished, use:  0:00:02.833743
 gets finished, use:  0:00:03.301713
 
+API design
+store()  
+gets()   
+getall()   
+deletes()
+Here is 4 ways to implement:
+
+hmset()
+data_dict -> obj init -> data_list -> msgpack -> redis
+data_dict -> data_list -> msgpack -> redis
+dict -> msgpack -> redis
+this version using the last way is faster than the others.
+redis pipeline and multiprocessing was used in this project.
 
 python 
 
